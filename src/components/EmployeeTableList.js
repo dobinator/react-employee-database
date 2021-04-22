@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import EmployeeCard from "./EmployeeCard";
+import EmployeeTable from "./EmployeeTable";
 import api from "../utils/api2"; 
 
-class EmployeeCardList extends Component{
+class EmployeeTableList extends Component{
     state= {
         employee: [],
         filtered: [],
@@ -18,7 +18,7 @@ class EmployeeCardList extends Component{
     render(){
         return (
             this.state.filtered.map(employee =>(
-            <EmployeeCard
+            <EmployeeTable
                 key ={employee.login.uuid}
                 image ={employee.picture.thumbnail}
                 firstName ={employee.name.first}
@@ -35,5 +35,5 @@ class EmployeeCardList extends Component{
 
 
 
-export default EmployeeCardList;
+export default EmployeeTableList;
 
