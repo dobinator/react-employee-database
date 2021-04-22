@@ -1,5 +1,13 @@
 import React from "react";
 import API from "./utils/API";
+import Layout from "./components/Layout";
+import Navbar from "./components/Navbar";
+import EmployeeCardList from "./components/EmployeeCardList";
+import Footer from "./components/Footer";
+import EmployeeCard from "./components/EmployeeCard";
+
+
+
 
 class App extends React.Component {
   state = {
