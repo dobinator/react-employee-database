@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import EmployeeTable from "./EmployeeTable";
-import api from "../utils/api2"; 
+import API from "../utils/API2"; 
 import Navbar from "./Navbar"; 
 import moment from "moment"; 
 
@@ -10,7 +10,7 @@ class EmployeeTableList extends Component{
         filtered: [],
     }
     componentDidMount(){
-        api.getUsers()
+        API.getUsers()
         .then(response =>{
          this.setState({ employee: response.data.results,
           filtered: response.data.results,  

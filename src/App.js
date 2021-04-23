@@ -1,5 +1,5 @@
 import React from "react";
-import api from "utils/api2"; 
+import API from "./utils/API2"; 
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import EmployeeTableList from "./components/EmployeeTableList";
