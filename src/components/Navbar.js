@@ -1,19 +1,31 @@
 import React from "react";
 
 function Navbar(props) {
-const searchEmployee= (event)=>{
-  
-}
 
   return (
-    <nav className ="navbar navbar-light bg-light justify content-center">
+    <>
+    <nav className ="navbar sticky-top navbar-light bg-light justify content-center">
+      <div className ="container-fluid">
+       <span className ="navbar-brand fs-1">
+        Employee Directory
+      </span>
     <form className="form-inline">
-      <input className= "form-control mr-sm-2" 
+      <input 
+      className= "form-control mr-sm-2" 
       type="search"
-      aria-label= "search"
-      onKeyUp= {searchEmployee}/>
+      aria-label= "Search"
+      onChange= {props.searchEmployee}
+      />
+      <button
+      className= "btn btn-primary"
+      type= "button"
+      >Search
+      </button>
+
       </form>
+      </div>
       </nav>
+      </>
   )
 }
 
