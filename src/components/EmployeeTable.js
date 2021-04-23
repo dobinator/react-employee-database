@@ -2,8 +2,9 @@ import React from "react";
 
 function EmployeeTable(props) {
   return (
-      <table>
-      <td>
+ 
+      <tr>
+        <td>
         <img
           style={{ maxWidth: "60px" }}
           className="rounded-full shadow-md border border-gray-300"
@@ -18,7 +19,8 @@ function EmployeeTable(props) {
       <td>{props.phone}</td>
       <br></br>
       <td>{props.Dob}</td>
-     </table>
+      </tr>
+    
   );
 }
 

@@ -22,10 +22,25 @@ componentDidMount(){
   })
 }
 
+//set up frunctions that deal with the changing of state, so that when they typr a user, that employees gets filteres to only include names of that user
 
 render(){
   return (
-      this.state.filtered.map(employee =>(
+    //out the tabler head
+    //searchbar componet
+    
+<div class="container-fluid">
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">phone</th>
+      <th scope="col">DOB</th>
+    </tr>
+  </thead>
+      {this.state.filtered.map(employee =>(
       <EmployeeTable
           key ={employee.login.uuid}
           image ={employee.picture.thumbnail}
@@ -34,13 +49,18 @@ render(){
           email={employee.email}
           phone= {employee.phone}
           Dob= {moment(employee.dob.date).format('MM-DD-YYYY')}
-     />
+      
+      />
+    
   ))
+      }
+</table>
+     </div>
   )
 }
+
 }
-
-
+ 
 
 
 
