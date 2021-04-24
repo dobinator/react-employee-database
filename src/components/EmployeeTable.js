@@ -3,7 +3,8 @@ import React from "react";
 function EmployeeTable(props) {
   return (
  <table>
-   <head></head>
+   <thead></thead>
+   <tbody></tbody>
       <tr>
         <td>
         <img

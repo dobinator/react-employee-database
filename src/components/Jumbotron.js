@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+// import { Button } from "react-bootstrap"; 
 
 function Jumbotron() {
     return (
-        <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">High Byte </h1>
-          <p class="lead">A leading technology firm</p>
-        </div>
+      <div className="jumbotron jumbotron-fluid">
+        <div className= "container"> 
+          <h1>High Byte </h1>
+          <p>A leading technology firm</p>
+
+          <p></p>
       </div>
+     </div>
     )
 }
 

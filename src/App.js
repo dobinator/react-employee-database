@@ -1,7 +1,6 @@
 import React from "react";
 import moment from "moment";
 import API2 from "./utils/API2";
-import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import EmployeeTable from "./components/EmployeeTable";
@@ -21,28 +20,24 @@ class App extends React.Component {
       });
     });
   }
-   
-   handleInput = (event) => {
-     console.log(event.target.value)
-      this.setState({ employee: event.target.value});
-    };
 
-    // handleFormSubmit = (event) => {
-    //   event.preventDefault();
-    //   this.searchMovies(this.state.search);
-    // };
-
-    // set up functions that deal with the changing of state,
-    // so that when they type a user, that employees gets filtered to only include names of that user
+  handleInput = (event) => {
+    console.log(event.target.value);
+    this.setState({ employee: event.target.value });
+  };
 
   render() {
+    let filteredEmployee = this.state.employee.filter((employee) => {
+      return employee.name
+        .toLowerCase()
+        .includes(this.state.filtered.toLowerCase());
+    });
     return (
       //out the table head
       // <Navbar />
-      <div className="container-fluid">
-        <Layout/>
-        <Jumbotron/>
-        <Navbar handleInput ={this.handleInput}/>
+      <>
+        <Jumbotron />
+        <Navbar handleInput={this.handleInput} />
         <table className="table table-dark">
           <thead>
             <tr>
@@ -64,11 +59,12 @@ class App extends React.Component {
               Dob={moment(employee.dob.date).format("MM-DD-YYYY")}
             />
           ))}
+
         </table>
-        <Footer/>
-      </div>
+        <Footer />
+      </>
     );
-          }
-        }
+  }
+}
 
 export default App;
