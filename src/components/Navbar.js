@@ -14,7 +14,7 @@ function Navbar(props) {
       className= "form-control mr-sm-2" 
       type="search"
       aria-label= "Search"
-      onChange= {props.searchEmployee}
+      onChange= {props.employeeSearch}
       />
       <button
       className= "btn btn-primary"

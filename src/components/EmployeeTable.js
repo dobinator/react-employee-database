@@ -17,7 +17,6 @@ function EmployeeTable(props) {
       </td>
       <td>{props.email}</td>
       <td>{props.phone}</td>
-      <br></br>
       <td>{props.Dob}</td>
       </tr>
     
