@@ -12,9 +12,9 @@ function Navbar(props) {
     <form className="form-inline">
       <input 
       className= "form-control mr-sm-2" 
-      type="search"
+      type="Search"
       aria-label= "Search"
-      onChange= {props.employeeSearch}
+      onChange= {props.handleInput}
       />
       <button
       className= "btn btn-primary"

@@ -2,7 +2,8 @@ import React from "react";
 
 function EmployeeTable(props) {
   return (
- 
+ <table>
+   <head></head>
       <tr>
         <td>
         <img
@@ -19,7 +20,7 @@ function EmployeeTable(props) {
       <td>{props.phone}</td>
       <td>{props.Dob}</td>
       </tr>
-    
+    </table>
   );
 }
 

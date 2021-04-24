@@ -3,6 +3,7 @@ import moment from "moment";
 import API2 from "./utils/API2";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron";
 import EmployeeTable from "./components/EmployeeTable";
 import Footer from "./components/Footer";
 
@@ -20,19 +21,11 @@ class App extends React.Component {
       });
     });
   }
-  searchEmployee = (filter) => {
-    const employeeSearch = this.state.searched.sort((a, b) =>
-      a.name.first > b.name.first ? 1 : -1
-    );
-    this.setState({ search: employeeSearch });
-
-    // handleInputChange = (event) => {
-    //   const value = event.target.value;
-    //   const name = event.target.name;
-    //   this.setState({
-    //     [name]: value,
-    //   });
-    // };
+   
+   handleInput = (event) => {
+     console.log(event.target.value)
+      this.setState({ employee: event.target.value});
+    };
 
     // handleFormSubmit = (event) => {
     //   event.preventDefault();
@@ -41,13 +34,15 @@ class App extends React.Component {
 
     // set up functions that deal with the changing of state,
     // so that when they type a user, that employees gets filtered to only include names of that user
-  };
+
   render() {
     return (
       //out the table head
-      //searchbar componet
-      // <Navbar></Navbar>
+      // <Navbar />
       <div className="container-fluid">
+        <Layout/>
+        <Jumbotron/>
+        <Navbar handleInput ={this.handleInput}/>
         <table className="table table-dark">
           <thead>
             <tr>
@@ -70,9 +65,10 @@ class App extends React.Component {
             />
           ))}
         </table>
+        <Footer/>
       </div>
     );
-  }
-}
+          }
+        }
 
 export default App;
