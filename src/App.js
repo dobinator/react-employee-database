@@ -2,8 +2,8 @@ import React from "react";
 import moment from "moment";
 import API2 from "./utils/API2";
 import Navbar from "./components/Navbar";
-import Jumbotron from "./components/Jumbotron";
 import EmployeeTable from "./components/EmployeeTable";
+import Header from "./components/Header"; 
 import Footer from "./components/Footer";
 
 class App extends React.Component {
@@ -34,10 +34,12 @@ class App extends React.Component {
     });
     return (
       //out the table head
-      // <Navbar />
-      <>
-        <Jumbotron />
-        <Navbar handleInput={this.handleInput} />
+     <>
+       <Header/>
+        <Navbar
+        value ={this.state.search}
+         handleInput={this.handleInput} 
+         />
         <table className="table table-dark">
           <thead>
             <tr>

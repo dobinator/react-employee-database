@@ -3,7 +3,6 @@ import React from "react";
 function Navbar(props) {
 
   return (
-    <>
     <nav className ="navbar sticky-top navbar-light bg-light justify content-center">
       <div className= "container-fluid">
        <span className ="navbar-brand fs-1">
@@ -20,7 +19,7 @@ function Navbar(props) {
       </form>
       </div>
       </nav>
-      </>
+
   )
   }
 export default Navbar;
