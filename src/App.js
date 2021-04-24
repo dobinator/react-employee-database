@@ -10,6 +10,8 @@ class App extends React.Component {
   state = {
     employee: [],
     filtered: [],
+    search: "", 
+    sort: true,
   };
 
   componentDidMount() {
@@ -21,17 +23,35 @@ class App extends React.Component {
     });
   }
 
-  handleInput = (event) => {
+  handleInputChange = (event) => {
     console.log(event.target.value);
-    this.setState({ employee: event.target.value });
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState ({
+    [name]: value,
+    });
   };
 
+  handleSortByName = (event)=> {
+  const sortEmployees = this.state.employees.sort((a,b)=>)
+  a.name >b.name ? 1: -1);
+  this.setState({ results: sortEmployees });
+
+    switch (this.state.sort){
+    case true:
+    this.setState ({ sort: false});
+    break; 
+    case false:
+    this.setState({ sort: true });
+    sortEmployees.reverse(); 
+    break;
+
+    default:
+    console.log ("Something isn't right");
+    break;
+}
+  }
   render() {
-    let filteredEmployee = this.state.employee.filter((employee) => {
-      return employee.name
-        .toLowerCase()
-        .includes(this.state.filtered.toLowerCase());
-    });
     return (
       //out the table head
      <>
@@ -67,6 +87,6 @@ class App extends React.Component {
       </>
     );
   }
-}
+
 
 export default App;
