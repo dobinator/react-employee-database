@@ -33,8 +33,9 @@ class App extends React.Component {
   };
 
   handleSortByName = (event)=> {
-  const sortEmployees = this.state.employees.sort((a,b)=>)
-  a.name >b.name ? 1: -1);
+  const sortEmployees = this.state.employees.sort((a, b)=> 
+  a.name > b.name ? 1: -1
+  );
   this.setState({ results: sortEmployees });
 
     switch (this.state.sort){
@@ -49,15 +50,15 @@ class App extends React.Component {
     default:
     console.log ("Something isn't right");
     break;
-}
-  }
+} }
+  
   render() {
     return (
       //out the table head
      <>
        <Header/>
         <Navbar
-        value ={this.state.search}
+          value ={this.state.search}
          handleInput={this.handleInput} 
          />
         <table className="table table-dark">
@@ -87,6 +88,6 @@ class App extends React.Component {
       </>
     );
   }
-
+}
 
 export default App;

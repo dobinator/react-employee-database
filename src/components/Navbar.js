@@ -3,22 +3,20 @@ import React from "react";
 function Navbar(props) {
 
   return (
-    <nav className ="navbar sticky-top navbar-light bg-light justify content-center">
+    <div className ="navbar sticky-top navbar-light bg-light justify content-center">
       <div className= "container-fluid">
-       <span className ="navbar-brand fs-1">
-        Employee Directory
-      </span>
+       <h1>Employee Directory</h1>
+       <button onClick={handleSortbyName}></button>
     <form className="form-inline">
       <input 
       onChange= {props.handleInput}
       value= {props.value}
       className= "form-control" 
-      // type="Search"
-      aria-label= "Search"
-      />
+      type="text"
+     placeholder= "Search Employee" />
       </form>
       </div>
-      </nav>
+      </div>
 
   )
   }
