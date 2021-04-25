@@ -10,10 +10,10 @@ class App extends React.Component {
   state = {
     employee: [],
     filtered: [],
-    search: "", 
+    search: " ", 
     sort: true,
   };
-
+// call to get the information from the api
   componentDidMount() {
     API2.getUsers().then((response) => {
       this.setState({
@@ -22,16 +22,16 @@ class App extends React.Component {
       });
     });
   }
-
+// creating the search bar event for the employees
   handleInputChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     const value = event.target.value;
     const name = event.target.name;
     this.setState ({
     [name]: value,
     });
   };
-
+  // creating the function to sort employees
   handleSortByName = (event)=> {
   const sortEmployees = this.state.employees.sort((a, b)=> 
   a.name > b.name ? 1: -1
@@ -55,7 +55,7 @@ class App extends React.Component {
   render() {
     return (
       //out the table head
-     <>
+     <div className= "container-flex">
        <Header/>
         <Navbar
           value ={this.state.search}
@@ -85,7 +85,8 @@ class App extends React.Component {
 
         </table>
         <Footer />
-      </>
+        </div>
+    
     );
   }
 }
