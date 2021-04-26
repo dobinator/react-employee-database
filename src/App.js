@@ -61,7 +61,7 @@ class App extends React.Component {
          handleInput={this.handleInput} 
          />
         <table>
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th scope="col">Image</th>
               <th scope="col">Name</th>

@@ -3,9 +3,9 @@ import React from "react";
 function Navbar(props) {
 
   return (
-    <div className ="navbar sticky-top navbar-light bg-light justify content-center">
-      <p className = "font-weight-bold">High Byte</p>
-       <p>Employee Directory</p>
+    <div className ="navbar sticky-top navbar-dark bg-dark justify content-center">
+      <p class="navbar-brand text-white">High Byte</p>
+       <p className="text-white">Employee Directory</p>
        <button 
        className= "btn btn-secondary"
        type="submit"
