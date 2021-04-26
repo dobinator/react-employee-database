@@ -30,3 +30,8 @@ n/a
 ## Questions
 
 link to deployed website: 
+
+ https://dobinator.github.io/react-employee-database/
+ 
+ still of website: 
+<img width="1367" alt="screenshot" src="https://user-images.githubusercontent.com/77806090/116113887-c31c7400-a66d-11eb-983f-4944f71adeaf.png">
