@@ -30,6 +30,14 @@ class App extends React.Component {
     [name]: value,
     });
   };
+//  I want to make the table headers clickable for the sort.
+//   const onHeaderClick = () => {
+//     return {
+//       onClick: () => {
+//         // do something
+//       },
+//     };
+// };
   // creating the function to sort employees
   //using the ternary operator
   handleSortByName = (event)=> {
@@ -51,20 +59,21 @@ class App extends React.Component {
     console.log ("Something isn't right");
     break;
 } }
+// {/* <th scope="col"{...clickableHeader(column)}>Name</th> */}
   
   render() {
     return (
       //out the table head
      <div className= "container-flex">
         <Navbar
-          value ={this.state.search}
          handleInput={this.handleInput} 
          />
-        <table>
-          <thead className="thead-dark">
+        <table className ="table table-dark">
+          {/* // clickableHeaders ={onHeaderClick}> */}
+          <thead className="thead-light">
             <tr>
               <th scope="col">Image</th>
-              <th scope="col">Name</th>
+              <th scope= "col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">phone</th>
               <th scope="col">DOB</th>
