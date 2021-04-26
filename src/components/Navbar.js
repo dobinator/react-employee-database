@@ -4,11 +4,12 @@ function Navbar(props) {
 
   return (
     <div className ="navbar sticky-top navbar-light bg-light justify content-center">
-       <h1>Employee Directory</h1>
+      <p className = "font-weight-bold">High Byte</p>
+       <p>Employee Directory</p>
        <button 
        className= "btn btn-secondary"
        type="submit"
-       onClick={handleSortbyName}
+       onClick={props.handleSortbyName}
        >Name</button>
     <form className="form-inline">
       <input 

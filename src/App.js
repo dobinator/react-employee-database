@@ -3,7 +3,6 @@ import moment from "moment";
 import API2 from "./utils/API2";
 import Navbar from "./components/Navbar";
 import EmployeeTable from "./components/EmployeeTable";
-import Header from "./components/Header"; 
 import Footer from "./components/Footer";
 
 class App extends React.Component {
@@ -32,6 +31,7 @@ class App extends React.Component {
     });
   };
   // creating the function to sort employees
+  //using the ternary operator
   handleSortByName = (event)=> {
   const sortEmployees = this.state.employees.sort((a, b)=> 
   a.name > b.name ? 1: -1
@@ -56,12 +56,11 @@ class App extends React.Component {
     return (
       //out the table head
      <div className= "container-flex">
-       <Header/>
         <Navbar
           value ={this.state.search}
          handleInput={this.handleInput} 
          />
-        <table className="table table-dark">
+        <table>
           <thead>
             <tr>
               <th scope="col">Image</th>

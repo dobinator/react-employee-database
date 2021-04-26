@@ -2,7 +2,7 @@ import React from "react";
 
 function EmployeeTable(props) {
   return (
- <table>
+ <table className="table table-dark">
    <thead></thead>
    <tbody></tbody>
       <tr>
