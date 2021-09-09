@@ -16,21 +16,30 @@ An application database created for the user to quickly view employees in a dire
 
 * Contact/ Questions
 
-## Installation 
-This application has been published on Github.
+## Installation
+
+After cloning down the repo, ensure you have Node.js installed to install all dependancies. Once Node is on your machine,  open the integrated terminal and enter the command npm i to install all dependancies.
+
+To run the app locally on your machine, enter the command npm start in the integrated terminal.
 
 ## Built with:
+
 - React
 - HTML
 - CSS/Bulma
+- JavaScript
 
 
 ## Dependencies
 
+This application has been published on Github.
+
 ## Testing
+
 n/a
 
 ## Contact/ Questions
+
   If you need to contact me, my email is dobsonemily@gmail.com
 
 
